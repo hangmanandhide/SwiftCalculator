@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tiptotalTextfield: UITextField!
     @IBOutlet weak var tippercentTextfield: UITextField!
     @IBOutlet weak var totalTextfield: UITextField!
+    @IBOutlet weak var tipPercentSlider: UISlider!
     
     //MARK: - Properties
     let model = Model()
@@ -64,7 +65,12 @@ class ViewController: UIViewController {
         if subtotalTextfield.text?.count == 0 {
             subtotalTextfield.text = "$0.00"
         } else {
+            model.tipPercentFromSlider = Int(tipPercentSlider.value)
             model.subTotalFromTextField = subtotalTextfield.text!
+            
+            subtotalTextfield.text = model.subTotaltoCurrency
+            tiptotalTextfield.text = model.tipAmounttoCurrency
+            totalTextfield.text = model.totalAmounttoCurrency
         }
     }
     
