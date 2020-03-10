@@ -74,6 +74,9 @@
                     </view>
                     <connections>
                         <outlet property="subtotalTextfield" destination="WlR-1E-g5B" id="sGU-5Y-rtx"/>
+                        <outlet property="tippercentTextfield" destination="c3G-fi-akd" id="rzZ-4a-Nl7"/>
+                        <outlet property="tiptotalTextfield" destination="kvT-A9-6XA" id="9s2-PQ-1fj"/>
+                        <outlet property="totalTextfield" destination="G7P-OD-0n9" id="J2H-E7-2A5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -21,6 +21,9 @@ class ViewController: UIViewController {
     //MARK: - Outlets
     
     @IBOutlet weak var subtotalTextfield: UITextField!
+    @IBOutlet weak var tiptotalTextfield: UITextField!
+    @IBOutlet weak var tippercentTextfield: UITextField!
+    @IBOutlet weak var totalTextfield: UITextField!
     
 
     //MARK: - Functions
