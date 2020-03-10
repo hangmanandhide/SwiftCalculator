@@ -53,6 +53,23 @@ class Model {
     
     //MARK: - Convert to Currency
     
+    let formatter = NumberFormatter()
+    
+    var subTotaltoCurrency: String {
+        formatter.numberStyle = .currency
+        return formatter.string(from: subtotalAsDecimal as NSNumber)!
+    }
+
+    var tipAmounttoCurrency: String {
+        formatter.numberStyle = .currency
+        return formatter.string(from: tipAmount as NSNumber)!
+    }
+    
+    var totalAmounttoCurrency: String {
+        formatter.numberStyle = .currency
+        return formatter.string(from: totalAmount as NSNumber)!
+    }
+    
     
     
 }
