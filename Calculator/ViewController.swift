@@ -26,6 +26,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var tippercentTextfield: UITextField!
     @IBOutlet weak var totalTextfield: UITextField!
     
+    //MARK: - Properties
+    let model = Model()
+    
     //MARK: - Interactions
     
     @IBAction func dragSlider(_ sender: UISlider) {
@@ -57,6 +60,12 @@ class ViewController: UIViewController {
     
     @objc func dismissKeyboard() {
         subtotalTextfield.resignFirstResponder()
+        
+        if subtotalTextfield.text?.count == 0 {
+            subtotalTextfield.text = "$0.00"
+        } else {
+            model.subTotalFromTextField = subtotalTextfield.text!
+        }
     }
     
     
