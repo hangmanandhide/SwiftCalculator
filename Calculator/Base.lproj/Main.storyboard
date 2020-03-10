@@ -18,7 +18,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="D5v-ox-NjQ">
                                 <rect key="frame" x="36.5" y="125" width="345" height="275.5"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="right" contentVerticalAlignment="center" text="$0.00" textAlignment="natural" minimumFontSize="75" translatesAutoresizingMaskIntoConstraints="NO" id="WlR-1E-g5B">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="right" contentVerticalAlignment="center" placeholder="$0.00" textAlignment="right" minimumFontSize="75" translatesAutoresizingMaskIntoConstraints="NO" id="WlR-1E-g5B">
                                         <rect key="frame" x="157" y="0.0" width="188" height="118.5"/>
                                         <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="75"/>
@@ -72,6 +72,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="subtotalTextfield" destination="WlR-1E-g5B" id="sGU-5Y-rtx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
