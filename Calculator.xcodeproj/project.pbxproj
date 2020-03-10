@@ -15,6 +15,7 @@
 		F4AB45522417526200BD36EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4AB45502417526200BD36EF /* LaunchScreen.storyboard */; };
 		F4AB455D2417526200BD36EF /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB455C2417526200BD36EF /* CalculatorTests.swift */; };
 		F4AB45682417526200BD36EF /* CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB45672417526200BD36EF /* CalculatorUITests.swift */; };
+		F4AB45762417529600BD36EF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4AB45752417529600BD36EF /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		F4AB45632417526200BD36EF /* CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4AB45672417526200BD36EF /* CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorUITests.swift; sourceTree = "<group>"; };
 		F4AB45692417526200BD36EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4AB45752417529600BD36EF /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				F4AB454E2417526200BD36EF /* Assets.xcassets */,
 				F4AB45502417526200BD36EF /* LaunchScreen.storyboard */,
 				F4AB45532417526200BD36EF /* Info.plist */,
+				F4AB45752417529600BD36EF /* Model.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				F4AB454A2417525F00BD36EF /* ViewController.swift in Sources */,
 				F4AB45462417525F00BD36EF /* AppDelegate.swift in Sources */,
 				F4AB45482417525F00BD36EF /* SceneDelegate.swift in Sources */,
+				F4AB45762417529600BD36EF /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
