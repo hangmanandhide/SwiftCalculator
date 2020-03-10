@@ -35,6 +35,9 @@ class ViewController: UIViewController {
     @IBAction func dragSlider(_ sender: UISlider) {
         tippercentTextfield.text = "Tip (\(Int(sender.value))%):"
         print("\(Int(sender.value))")
+        
+        model.tipPercentFromSlider = Int(sender.value)
+        updateLabels()
     }
     
 
@@ -64,15 +67,22 @@ class ViewController: UIViewController {
         
         if subtotalTextfield.text?.count == 0 {
             subtotalTextfield.text = "$0.00"
+            model.subTotalFromTextField = "$0.00"
+            updateLabels()
         } else {
             model.tipPercentFromSlider = Int(tipPercentSlider.value)
             model.subTotalFromTextField = subtotalTextfield.text!
             
-            subtotalTextfield.text = model.subTotaltoCurrency
-            tiptotalTextfield.text = model.tipAmounttoCurrency
-            totalTextfield.text = model.totalAmounttoCurrency
+            updateLabels()
         }
     }
+    
+    func updateLabels() {
+        subtotalTextfield.text = model.subTotaltoCurrency
+        tiptotalTextfield.text = model.tipAmounttoCurrency
+        totalTextfield.text = model.totalAmounttoCurrency
+    }
+    
     
     
 }
