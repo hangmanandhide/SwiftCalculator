@@ -19,43 +19,46 @@
                                 <rect key="frame" x="36.5" y="125" width="345" height="275.5"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="right" contentVerticalAlignment="center" placeholder="$0.00" textAlignment="right" minimumFontSize="75" translatesAutoresizingMaskIntoConstraints="NO" id="WlR-1E-g5B">
-                                        <rect key="frame" x="157" y="0.0" width="188" height="118.5"/>
+                                        <rect key="frame" x="157" y="0.0" width="188" height="132.5"/>
                                         <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="75"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CZE-fG-BdX">
-                                        <rect key="frame" x="165" y="141.5" width="180" height="29"/>
+                                        <rect key="frame" x="215" y="155.5" width="130" height="22"/>
                                         <subviews>
-                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Tip (15%):" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c3G-fi-akd">
-                                                <rect key="frame" x="0.0" y="0.0" width="106" height="29"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Tip (15%):" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c3G-fi-akd">
+                                                <rect key="frame" x="0.0" y="0.0" width="77" height="22"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="$0.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kvT-A9-6XA">
-                                                <rect key="frame" x="114" y="0.0" width="66" height="29"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <rect key="frame" x="85" y="0.0" width="45" height="22"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pWL-MW-TMt">
-                                        <rect key="frame" x="215" y="193.5" width="130" height="29"/>
+                                        <rect key="frame" x="250" y="200.5" width="95" height="22"/>
                                         <subviews>
                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Total:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Vy-BG-DAp">
-                                                <rect key="frame" x="0.0" y="0.0" width="56" height="29"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="42" height="22"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="$0.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G7P-OD-0n9">
-                                                <rect key="frame" x="64" y="0.0" width="66" height="29"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <rect key="frame" x="50" y="0.0" width="45" height="22"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="6Y0-go-ze1">
                                         <rect key="frame" x="-2" y="245.5" width="349" height="31"/>
+                                        <connections>
+                                            <action selector="dragSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="7OE-T4-feg"/>
+                                        </connections>
                                     </slider>
                                 </subviews>
                                 <constraints>

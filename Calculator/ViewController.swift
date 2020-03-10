@@ -14,7 +14,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        DoneButtonOnKeyboard()
+        subtotalTextfield.becomeFirstResponder()
+        createKeyboard()
         // Do any additional setup after loading the view.
     }
     
@@ -25,17 +26,23 @@ class ViewController: UIViewController {
     @IBOutlet weak var tippercentTextfield: UITextField!
     @IBOutlet weak var totalTextfield: UITextField!
     
+    //MARK: - Interactions
+    
+    @IBAction func dragSlider(_ sender: UISlider) {
+        tippercentTextfield.text = "Tip (\(Int(sender.value))%):"
+        print("\(Int(sender.value))")
+    }
+    
 
     //MARK: - Functions
     
-    func DoneButtonOnKeyboard() {
-        subtotalTextfield.becomeFirstResponder()
+    func createKeyboard() {
         
         let accessoryToolbar: UIToolbar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
         accessoryToolbar.barStyle = UIBarStyle.default
         
         let resetButton = UIBarButtonItem.init(title: "Reset", style: .done, target: self, action: nil)
-        let doneButton = UIBarButtonItem.init(title: "Done", style: .done, target: self, action: #selector(self.subtotalTextfield.resignFirstResponder))
+        let doneButton = UIBarButtonItem.init(title: "Done", style: .done, target: self, action: #selector(dismissKeyboard))
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
 
         
@@ -46,6 +53,10 @@ class ViewController: UIViewController {
         subtotalTextfield.inputAccessoryView = accessoryToolbar
         
         
+    }
+    
+    @objc func dismissKeyboard() {
+        subtotalTextfield.resignFirstResponder()
     }
     
     
