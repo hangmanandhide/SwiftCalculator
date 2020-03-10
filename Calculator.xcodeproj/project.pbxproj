@@ -104,11 +104,11 @@
 				F4AB45452417525F00BD36EF /* AppDelegate.swift */,
 				F4AB45472417525F00BD36EF /* SceneDelegate.swift */,
 				F4AB45492417525F00BD36EF /* ViewController.swift */,
+				F4AB45752417529600BD36EF /* Model.swift */,
 				F4AB454B2417525F00BD36EF /* Main.storyboard */,
 				F4AB454E2417526200BD36EF /* Assets.xcassets */,
 				F4AB45502417526200BD36EF /* LaunchScreen.storyboard */,
 				F4AB45532417526200BD36EF /* Info.plist */,
-				F4AB45752417529600BD36EF /* Model.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";

@@ -29,10 +29,29 @@ class Model {
 //    convert tipamount to currency
 //    convert total to currency
     
+    //MARK: - Calculations
     
     var subTotalFromTextField = "0.00"
     var tipPercentFromSlider = 15
     
+    var subtotalAsDecimal: NSDecimalNumber {
+        return NSDecimalNumber(string: subTotalFromTextField)
+    }
+    
+    var tipPercent: NSDecimalNumber {
+        return NSDecimalNumber(value: Double(tipPercentFromSlider)/100)
+    }
+    
+    var tipAmount: NSDecimalNumber {
+        return subtotalAsDecimal.multiplying(by: tipPercent)
+    }
+    
+    var totalAmount: NSDecimalNumber {
+        return subtotalAsDecimal.adding(tipAmount)
+    }
+    
+    
+    //MARK: - Convert to Currency
     
     
     
