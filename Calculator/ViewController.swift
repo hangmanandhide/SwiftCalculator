@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: - View Did Load
 
@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         subtotalTextfield.becomeFirstResponder()
         createKeyboard()
+        tipPercentSlider.isEnabled = false
         // Do any additional setup after loading the view.
     }
     
@@ -31,6 +32,10 @@ class ViewController: UIViewController {
     let model = Model()
     
     //MARK: - Interactions
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        tipPercentSlider.isEnabled = false
+    }
     
     @IBAction func dragSlider(_ sender: UISlider) {
         tippercentTextfield.text = "Tip (\(Int(sender.value))%):"
@@ -48,7 +53,7 @@ class ViewController: UIViewController {
         let accessoryToolbar: UIToolbar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
         accessoryToolbar.barStyle = UIBarStyle.default
         
-        let resetButton = UIBarButtonItem.init(title: "Reset", style: .done, target: self, action: nil)
+        let resetButton = UIBarButtonItem.init(title: "Reset", style: .done, target: self, action: #selector(resetValues))
         let doneButton = UIBarButtonItem.init(title: "Done", style: .done, target: self, action: #selector(dismissKeyboard))
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
 
@@ -64,6 +69,7 @@ class ViewController: UIViewController {
     
     @objc func dismissKeyboard() {
         subtotalTextfield.resignFirstResponder()
+        tipPercentSlider.isEnabled = true
         
         if subtotalTextfield.text?.count == 0 {
             subtotalTextfield.text = "$0.00"
@@ -81,6 +87,11 @@ class ViewController: UIViewController {
         subtotalTextfield.text = model.subTotaltoCurrency
         tiptotalTextfield.text = model.tipAmounttoCurrency
         totalTextfield.text = model.totalAmounttoCurrency
+    }
+    
+    @objc func resetValues() {
+        subtotalTextfield.text = "$0.00"
+        updateLabels()
     }
     
     

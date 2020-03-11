@@ -23,6 +23,9 @@
                                         <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="75"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="0Vd-6p-tTc"/>
+                                        </connections>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CZE-fG-BdX">
                                         <rect key="frame" x="215" y="155.5" width="130" height="22"/>
