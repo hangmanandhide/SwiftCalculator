@@ -54,7 +54,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         accessoryToolbar.barStyle = UIBarStyle.default
         
         let resetButton = UIBarButtonItem.init(title: "Reset", style: .done, target: self, action: #selector(resetValues))
-        let doneButton = UIBarButtonItem.init(title: "Done", style: .done, target: self, action: #selector(dismissKeyboard))
+        let doneButton = UIBarButtonItem.init(title: "Done", style: .done, target: self, action: #selector(checkForChange))
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
 
         
@@ -67,8 +67,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    @objc func dismissKeyboard() {
-        subtotalTextfield.resignFirstResponder()
+    @objc func checkForChange() {
+        if (subtotalTextfield.text == model.changeCheckValue) || subtotalTextfield.text?.count == 0 {
+            return
+        } else {
+            runCalculations()
+        }
+    }
+    
+    @objc func runCalculations() {
         tipPercentSlider.isEnabled = true
         
         if subtotalTextfield.text?.count == 0 {
@@ -87,11 +94,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
         subtotalTextfield.text = model.subTotaltoCurrency
         tiptotalTextfield.text = model.tipAmounttoCurrency
         totalTextfield.text = model.totalAmounttoCurrency
+        model.changeCheckValue = model.subTotaltoCurrency
     }
     
     @objc func resetValues() {
-        subtotalTextfield.text = "$0.00"
-        updateLabels()
+        subtotalTextfield.text?.removeAll()
+        model.tipPercentFromSlider = 15
+        model.subTotalFromTextField = "$0.00"
+        tiptotalTextfield.text = "$0.00"
+        totalTextfield.text = "$0.00"
+        tipPercentSlider.isEnabled = false
     }
     
     

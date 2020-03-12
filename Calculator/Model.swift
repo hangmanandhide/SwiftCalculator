@@ -33,6 +33,9 @@ class Model {
     
     var subTotalFromTextField = "0.00"
     var tipPercentFromSlider = 15
+    var changeCheckValue:String = "nil"
+    
+    
     
     var subtotalAsDecimal: NSDecimalNumber {
         return NSDecimalNumber(string: subTotalFromTextField)
